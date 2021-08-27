@@ -10,7 +10,7 @@ minetest.register_tool("gravity_falls:memory_gun", {
 	description = "Memory Gun",
 	inventory_image = "mem_gun.png^[transformFX",
 	stack_max=1,
-	groups = {not_in_creative_inventory = 1},
+	groups = {},
 	on_use = function(itemstack, player, pointed_thing)
 		if pointed_thing.type == "object" then
 			local object = pointed_thing.ref
@@ -83,7 +83,7 @@ end
 minetest.register_craftitem("gravity_falls:1", {
 		description = "1",
 		inventory_image = "journal_1.png",
-		groups = {not_in_creative_inventory = 1},
+		groups = {},
 		on_use = function(itemstack, player, pointed_thing)
 			minetest.show_formspec(player:get_player_name(), "journal", get_journal_formspec("one", "four"))
 		end
@@ -91,7 +91,7 @@ minetest.register_craftitem("gravity_falls:1", {
 minetest.register_craftitem("gravity_falls:2", {
 		description = "2",
 		inventory_image = "journal_2.png",
-		groups = {not_in_creative_inventory = 1},
+		groups = {},
 		on_use = function(itemstack, player, pointed_thing)
 			minetest.show_formspec(player:get_player_name(), "journal", get_journal_formspec("two", "four"))
 		end
@@ -99,7 +99,7 @@ minetest.register_craftitem("gravity_falls:2", {
 minetest.register_craftitem("gravity_falls:3", {
 		description = "3",
 		inventory_image = "journal_3.png",
-		groups = {not_in_creative_inventory = 1},
+		groups = {},
 		on_use = function(itemstack, player, pointed_thing)
 			minetest.show_formspec(player:get_player_name(), "journal", get_journal_formspec("three", "one"))
 		end
